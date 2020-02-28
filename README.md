@@ -57,10 +57,17 @@ So, we have four scripts defined, all of them dependent on the react-scripts pac
 * build. Minify the application and prepares it optimized for production.
 * test. Runs the tests using **jest**.
 * eject. Removes the extra layer that create-react-app has created for us to make things simpler and let us configure everything that is under the hood.
+
+We may create more scripts. We will do this in the next section of this tutorial in order automatically deploy our web application to github.io.
+
 ```
   "eslintConfig": { 
     "extends": "react-app"
   },
+```
+This part is the **linting** configuration. It statically analyzes the code looking for problems or improvements (unused imports, etc).
+
+```
   "browserslist": {
     "production": [
       ">0.2%",
@@ -74,5 +81,7 @@ So, we have four scripts defined, all of them dependent on the react-scripts pac
     ]
   }
 }
+```
+**Browserlist** is a powerful module that handles the problem of the vast number of browsers available in the market. For instance, not all javascript versions are compatible with every browsers. Also some css3 rules must be written with prefixes in order to make them work in multiple browsers. This module lets us define which browsers we are targeting, so modules that work under it (like babel), can share the same configuration. More information [here](https://github.com/browserslist/browserslist).
 
 ```
