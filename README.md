@@ -19,6 +19,10 @@ After executing this command, we will have a full react application created, let
   "name": "npm-tutorial",
   "version": "0.1.0",
   "private": true,
+```
+The first part of the file are the name, the version, and a flag indicating in the package is or not private. private=true means the software is not meant to be published in public repositories. The next section are the dependencies:
+
+```
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
@@ -27,6 +31,18 @@ After executing this command, we will have a full react application created, let
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
+```
+This is the libraries on which we depend. Lets say that we find a library that we want to use, in this case google-map-react. In order to add it to our project we should execute:
+```
+npm install --save google-map-react
+```
+This will add a new line to dependencies section:
+```
+"google-map-react": "^1.1.6",
+```
+The ^ symbol means that this package will be updated (when available) until there is a major version (in this case until 2.0.0 release). Check this [discussion](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) for further information.
+
+```
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
