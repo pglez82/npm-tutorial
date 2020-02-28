@@ -14,7 +14,7 @@ After executing this command, we will have a full react application created, let
 4. **package.json**. This file is very important. It is the main file for configuring npm for your application. Everytime you install a new dependency to your project, it will be added to this file. But only the dependencies, but we will have start scripts, build scripts and even, deploy scripts.
 
 ## The package.json file
-```json
+```json5
 {
   "name": "npm-tutorial",
   "version": "0.1.0",
