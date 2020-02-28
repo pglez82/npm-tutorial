@@ -42,6 +42,9 @@ This will add a new line to dependencies section:
 ```
 The ^ symbol means that this package will be updated (when available) until there is a major version (in this case until 2.0.0 release). Check this [discussion](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) for further information.
 
+We can always update our node_modules directory (or create it if we've just cloned the project) executing `npm install`
+
+The next part are the scripts. This is very important part as it allow us to start the application, build a release version, etc.
 ```
   "scripts": {
     "start": "react-scripts start",
