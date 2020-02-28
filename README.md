@@ -10,8 +10,10 @@ After executing this command, we will have a full react application created, let
 
 1. **node_modules**. This is where all the libraries are stored in local. This directory shouldn'd be uploaded to git.
 2. **src**. This is where the code of our application lives. Inside there is a bunch of js and css files. All the code in react will be written in js files.
-3. **public**. 
+3. **public**. Basic resources to load the website.
 4. **package.json**. This file is very important. It is the main file for configuring npm for your application. Everytime you install a new dependency to your project, it will be added to this file. But only the dependencies, but we will have start scripts, build scripts and even, deploy scripts.
+5. **package-lock.json**. 
+6. **.git and .gitignore**. An already configured git repository.
 
 ## The package.json file
 ```json5
@@ -84,4 +86,6 @@ This part is the **linting** configuration. It statically analyzes the code look
 ```
 **Browserlist** is a powerful module that handles the problem of the vast number of browsers available in the market. For instance, not all javascript versions are compatible with every browsers. Also some css3 rules must be written with prefixes in order to make them work in multiple browsers. This module lets us define which browsers we are targeting, so modules that work under it (like babel), can share the same configuration. More information [here](https://github.com/browserslist/browserslist).
 
-```
+## Adding a deploy script
+Follow instructions [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
+
