@@ -15,7 +15,6 @@ After executing this command, we will have a full react application created, let
 
 ## The package.json file
 ```json5
-{
   "name": "npm-tutorial",
   "version": "0.1.0",
   "private": true,
@@ -52,6 +51,13 @@ The next part are the scripts. This is very important part as it allow us to sta
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+```
+So, we have four scripts defined, all of them dependent on the react-scripts package. This is what they do:
+* start. It creates a development server in localhost and launch the app in the browser. It supports online modifications.
+* build. Minify the application and prepares it optimized for production.
+* test. Runs the tests using **jest**.
+* eject. Removes the extra layer that create-react-app has created for us to make things simpler and let us configure everything that is under the hood.
+```
   "eslintConfig": { 
     "extends": "react-app"
   },
