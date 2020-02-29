@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/npm-tutorial/static/css/main.d1b05096.chunk.css",
+    "main.js": "/npm-tutorial/static/js/main.32da7d0a.chunk.js",
+    "main.js.map": "/npm-tutorial/static/js/main.32da7d0a.chunk.js.map",
+    "runtime-main.js": "/npm-tutorial/static/js/runtime-main.ef9d4001.js",
+    "runtime-main.js.map": "/npm-tutorial/static/js/runtime-main.ef9d4001.js.map",
+    "static/js/2.28d221d8.chunk.js": "/npm-tutorial/static/js/2.28d221d8.chunk.js",
+    "static/js/2.28d221d8.chunk.js.map": "/npm-tutorial/static/js/2.28d221d8.chunk.js.map",
+    "index.html": "/npm-tutorial/index.html",
+    "precache-manifest.75db4adf0b1a73f59625f480d8fbaf20.js": "/npm-tutorial/precache-manifest.75db4adf0b1a73f59625f480d8fbaf20.js",
+    "service-worker.js": "/npm-tutorial/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/npm-tutorial/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.28d221d8.chunk.js.LICENSE.txt": "/npm-tutorial/static/js/2.28d221d8.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/npm-tutorial/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef9d4001.js",
+    "static/js/2.28d221d8.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.32da7d0a.chunk.js"
+  ]
+}
