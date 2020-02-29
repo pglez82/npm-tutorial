@@ -97,5 +97,5 @@ For this matter we will use the module `gh-pages` which makes the task of automa
    "deploy": "gh-pages -d build"
    ```
 4. If you haven't done it already, configure the git repository. That means creating the repository in git, and configuring the remote in your local repository: `git remote add origin git@github.com:pglez82/npm-tutorial.git`.
-5. 
+5. Everything is ready, let's deploy the site: `npm run deploy`. With this command, npm will create an optimized version of your site in the `build` directory. Then, it will create a new branch in your repository (only in remote), called `gh-pages`. It will then upload your production site there. The website will be available in [https://pglez82.github.io/npm-tutorial/](https://pglez82.github.io/npm-tutorial/)
 
