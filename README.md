@@ -4,7 +4,7 @@ Let's start using npx to create our first react application.
 ```
 npx create-react-app npm-tutorial
 ```
-Note that npx is an npm package runner, meaning that it will download the package and execute it (npm only downloads packages).
+Note that *npx* is an npm package runner, meaning that it will download the package and execute it (npm only downloads packages).
 
 After executing this command, we will have a full react application created, lets investigate whats in the `npm-tutorial` directory.
 
@@ -21,7 +21,7 @@ After executing this command, we will have a full react application created, let
   "version": "0.1.0",
   "private": true,
 ```
-The first part of the file are the name, the version, and a flag indicating in the package is or not private. private=true means the software is not meant to be published in public repositories. The next section are the dependencies:
+The first part of the file are the name, the version, and a flag indicating in the package is or not private. `private=true` means the software is not meant to be published in public repositories. The next section are the dependencies:
 
 ```
   "dependencies": {
@@ -87,5 +87,11 @@ This part is the **linting** configuration. It statically analyzes the code look
 **Browserlist** is a powerful module that handles the problem of the vast number of browsers available in the market. For instance, not all javascript versions are compatible with every browsers. Also some css3 rules must be written with prefixes in order to make them work in multiple browsers. This module lets us define which browsers we are targeting, so modules that work under it (like babel), can share the same configuration. More information [here](https://github.com/browserslist/browserslist).
 
 ## Adding a deploy script
-Follow instructions [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
+For this matter we will use the module `gh-pages` which makes the task of automatically deploy a website to GitHub pages extremely easy. The steps are the following:
+
+1. Install the module: `npm install gh-pages --save-dev`
+2. Add the homepage property: `"homepage":"http://{username}.github.io/{repo-name}"`. In my case this will translate to:
+```
+"homepage":"http://pglez82.github.io/npm-tutorial"
+```
 
