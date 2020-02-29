@@ -96,5 +96,6 @@ For this matter we will use the module `gh-pages` which makes the task of automa
    "predeploy": "npm run build",
    "deploy": "gh-pages -d build"
    ```
-4. If you haven't done it already, configure the git repository. That means creating the repository in git, and configuring the remote in your local repository: `git remote add origin git@github.com:Yuribenjamin/my-app.git`
+4. If you haven't done it already, configure the git repository. That means creating the repository in git, and configuring the remote in your local repository: `git remote add origin git@github.com:pglez82/npm-tutorial.git`.
+5. 
 
