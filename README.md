@@ -90,8 +90,10 @@ This part is the **linting** configuration. It statically analyzes the code look
 For this matter we will use the module `gh-pages` which makes the task of automatically deploy a website to GitHub pages extremely easy. The steps are the following:
 
 1. Install the module: `npm install gh-pages --save-dev`
-2. Add the homepage property: `"homepage":"http://{username}.github.io/{repo-name}"`. In my case this will translate to:
-```
-"homepage":"http://pglez82.github.io/npm-tutorial"
-```
+2. Add the homepage property (in the top level of your package.json: `"homepage":"http://{username}.github.io/{repo-name}"`. In my case this will translate to: `"homepage":"http://pglez82.github.io/npm-tutorial"`.
+3. Add two scripts in the scripts section:
+   ``` 
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+   ```
 
