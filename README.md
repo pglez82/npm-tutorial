@@ -41,14 +41,14 @@ This will add a new line to dependencies section:
 ```
 "google-map-react": "^1.1.6",
 ```
-The ^ symbol means that this package will be updated (when available) until there is a major version (in this case until 2.0.0 release). Check this [discussion](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) for further information.
+The ^ symbol means that this package will be updated (when available) until there is a major version (in this case until 2.0.0 release). If we use ~, it will update when there is new patch version (version numbers are *major.minor.patch*). Check this [discussion](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) for further information.
 
 We can always update our node_modules directory (or create it if we've just cloned the project). There are multiple ways to do that:
 * `npm install`. Will install all the packages of `package.json`. It will try to use the specific versions in `package-lock.json`.
 * `npm update`. If we have specified versions as *^1.1.6*, it will try to update the versions accordinly and then it will rewrite both `package.json` and `package-lock.json`.
 * `npm ci`. Installs the package versions in `package-lock.json`.
 
-A good explanation of the diffference between these commands is in this [post](https://stackoverflow.com/a/53594050/2828454)
+A good explanation of the diffference between these commands is in this [post](https://stackoverflow.com/a/53594050/2828454).
 
 The next part are the scripts. This is very important part as it allow us to start the application, build a release version, etc.
 ```
