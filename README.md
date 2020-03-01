@@ -12,7 +12,7 @@ After executing this command, we will have a full react application created, let
 2. **src**. This is where the code of our application lives. Inside there is a bunch of js and css files. All the code in react will be written in js files.
 3. **public**. Basic resources to load the website.
 4. **package.json**. This file is very important. It is the main file for configuring npm for your application. Everytime you install a new dependency to your project, it will be added to this file. But only the dependencies, but we will have start scripts, build scripts and even, deploy scripts.
-5. **package-lock.json**. 
+5. **package-lock.json**. It has an exact representation of the dependency tree. This is done to ensure that all developers can share the same libraries version. More on this later.
 6. **.git and .gitignore**. An already configured git repository.
 
 ## The package.json file
@@ -43,7 +43,12 @@ This will add a new line to dependencies section:
 ```
 The ^ symbol means that this package will be updated (when available) until there is a major version (in this case until 2.0.0 release). Check this [discussion](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) for further information.
 
-We can always update our node_modules directory (or create it if we've just cloned the project) executing `npm install`
+We can always update our node_modules directory (or create it if we've just cloned the project). There are multiple ways to do that:
+* `npm install`. Will install all the packages of `package.json`. It will try to use the specific versions in `package-lock.json`.
+* `npm update`. If we have specified versions as *^1.1.6*, it will try to update the versions accordinly and then it will rewrite both `package.json` and `package-lock.json`.
+* `npm ci`. Installs the package versions in `package-lock.json`.
+
+A good explanation of the diffference between these commands is in this [post](https://stackoverflow.com/a/53594050/2828454)
 
 The next part are the scripts. This is very important part as it allow us to start the application, build a release version, etc.
 ```
