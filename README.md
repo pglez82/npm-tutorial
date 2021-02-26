@@ -10,8 +10,8 @@ After answering some basic stuff about our project (press enter for default valu
 
 Lets say we want to create a simple application that computes the distance between two coordinates. Using a search engine we can find a [library](https://www.npmjs.com/package/geolib) that does just that. Lets just add this dependency to our new project:
 
-```bash
-npm install geolib
+```sh
+npm install --save geolib
 ```
 Check your `package.json` file. In the dependencies section, you will see geolib. The actual library files will be in the `node_modules` directory.
 
