@@ -10,7 +10,7 @@ After answering some basic stuff about our project (press enter for default valu
 
 Lets say we want to create a simple application that computes the distance between two coordinates. Using a search engine we can find a [library](https://www.npmjs.com/package/geolib) that does just that. Lets just add this dependency to our new project:
 
-```
+```bash
 npm install geolib
 ```
 Check your `package.json` file. In the dependencies section, you will see geolib. The actual library files will be in the `node_modules` directory.
@@ -29,7 +29,7 @@ If we execute this program using `node index.js` the result will be `22312`, tha
 
 Lets see how to automate lauching the application. Go to the `package.json` and find the scripts section. Lets write our first script:
 
-```json5
+```yaml
 "scripts": {
    "start": "node index.js"
 },
@@ -56,14 +56,14 @@ After executing this command, we will have a full react application created, let
 6. **.git and .gitignore**. An already configured git repository.
 
 ## The package.json file
-```json5
+```yaml
   "name": "npm-tutorial",
   "version": "0.1.0",
   "private": true,
 ```
 The first part of the file are the name, the version, and a flag indicating in the package is or not private. `private=true` means the software is not meant to be published in public repositories. The next section are the dependencies:
 
-```json5
+```yaml
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
@@ -78,7 +78,7 @@ This is the libraries on which we depend. Lets say that we find a library that w
 npm install --save google-map-react
 ```
 This will add a new line to dependencies section:
-```
+```yaml
 "google-map-react": "^1.1.6",
 ```
 The ^ symbol means that this package will be updated (when available) until there is a major version (in this case until 2.0.0 release). If we use ~, it will update when there is new patch version (version numbers are *major.minor.patch*). Check this [discussion](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) for further information.
@@ -93,7 +93,7 @@ A good explanation of the diffference between these commands is in this [post](h
 There is also the possibility to **delete a dependency**. For that matter use npm uninstall google-map-react --save
 
 The next part are the scripts. This is very important part as it allow us to start the application, build a release version, etc.
-```
+```yaml
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -109,14 +109,14 @@ So, we have four scripts defined, all of them dependent on the react-scripts pac
 
 We may create more scripts. We will do this in the next section of this tutorial in order automatically deploy our web application to github.io.
 
-```
+```yaml
   "eslintConfig": { 
     "extends": "react-app"
   },
 ```
 This part is the **linting** configuration. It statically analyzes the code looking for problems or improvements (unused imports, etc).
 
-```
+```yaml
   "browserslist": {
     "production": [
       ">0.2%",
