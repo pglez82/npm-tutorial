@@ -1,4 +1,44 @@
-# npm-tutorial
+# Starting with NPM
+NPM is a software Package Manager and Installer, that will allow us to automate the dependency managment of our Node projects. It also happens to be the largests software repository in the world with more than 800k published packages.
+
+In this example we are going to create a project that uses NPM from scratch:
+
+```
+npm init
+```
+After answering some basic stuff about our project (press enter for default values), a `package.json` file will be created. This file is very important. It is the main file for configuring npm for your application.
+
+Lets say we want to create a simple application that computes the distance between two coordinates. Using a search engine we can find a [library](https://www.npmjs.com/package/geolib) that does just that. Lets just add this dependency to our new project:
+
+```
+npm install geolib
+```
+Check your `package.json` file. In the dependencies section, you will see geolib. The actual library files will be in the `node_modules` directory.
+
+Lets write a simple program that uses this library. Create a file `index.js`:
+
+```javascript
+const geolib = require('geolib');
+
+console.log(geolib.getDistance(
+    { latitude: 43.3694855, longitude: -5.8661674 }, //Oviedo
+    { latitude: 43.5314231, longitude: -5.7034739 }  //Gijón
+));
+```
+If we execute this program using `node index.js` the result will be `22312`, that is the distance between Oviedo and Gijón in meters. It works!
+
+Lets see how to automate lauching the application. Go to the `package.json` and find the scripts section. Lets write our first script:
+
+```json5
+"scripts": {
+   "start": "node index.js"
+},
+```
+Now we can run our application with `npm start`. Obviously we can have more scripts. We will deep more into this in the next example.
+
+
+
+# Using NPM to create a basic React application
 
 Let's start using npx to create our first react application. 
 ```
@@ -23,7 +63,7 @@ After executing this command, we will have a full react application created, let
 ```
 The first part of the file are the name, the version, and a flag indicating in the package is or not private. `private=true` means the software is not meant to be published in public repositories. The next section are the dependencies:
 
-```
+```json5
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
@@ -92,17 +132,4 @@ This part is the **linting** configuration. It statically analyzes the code look
 }
 ```
 **Browserlist** is a powerful module that handles the problem of the vast number of browsers available in the market. For instance, not all javascript versions are compatible with every browsers. Also some css3 rules must be written with prefixes in order to make them work in multiple browsers. This module lets us define which browsers we are targeting, so modules that work under it (like babel), can share the same configuration. More information [here](https://github.com/browserslist/browserslist).
-
-## Adding a deploy script
-For this matter we will use the module `gh-pages` which makes the task of automatically deploy a website to GitHub pages extremely easy. The steps are the following:
-
-1. Install the module: `npm install gh-pages --save-dev`
-2. Add the homepage property (in the top level of your package.json: `"homepage":"http://{username}.github.io/{repo-name}"`. In my case this will translate to: `"homepage":"http://pglez82.github.io/npm-tutorial"`.
-3. Add two scripts in the scripts section:
-   ``` 
-   "predeploy": "npm run build",
-   "deploy": "gh-pages -d build"
-   ```
-4. If you haven't done it already, configure the git repository. That means creating the repository in git, and configuring the remote in your local repository: `git remote add origin git@github.com:pglez82/npm-tutorial.git`.
-5. Everything is ready, let's deploy the site: `npm run deploy`. With this command, npm will create an optimized version of your site in the `build` directory. Then, it will create a new branch in your repository (only in remote), called `gh-pages`. It will then upload your production site there. The website will be available in [https://pglez82.github.io/npm-tutorial/](https://pglez82.github.io/npm-tutorial/)
 
