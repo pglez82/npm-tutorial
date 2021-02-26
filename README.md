@@ -65,12 +65,14 @@ The first part of the file are the name, the version, and a flag indicating in t
 
 ```yaml
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.1",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.7.3",
+    "cra-template": "1.1.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.0"
   },
 ```
 This is the libraries on which we depend. Lets say that we find a library that we want to use, in this case google-map-react. In order to add it to our project we should execute:
@@ -79,9 +81,9 @@ npm install --save google-map-react
 ```
 This will add a new line to dependencies section:
 ```yaml
-"google-map-react": "^1.1.6",
+"google-map-react": "^2.1.9",
 ```
-The ^ symbol means that this package will be updated (when available) until there is a major version (in this case until 2.0.0 release). If we use ~, it will update when there is new patch version (version numbers are *major.minor.patch*). Check this [discussion](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) for further information.
+The ^ symbol means that this package will be updated (when available) until there is a major version (in this case until 3.0.0 release). If we use ~, it will update when there is new patch version (version numbers are *major.minor.patch*). Check this [discussion](https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json) for further information.
 
 We can always update our node_modules directory (or create it if we've just cloned the project). There are multiple ways to do that:
 * `npm install`. Will install all the packages of `package.json`. It will try to use the specific versions in `package-lock.json`.
@@ -110,8 +112,11 @@ So, we have four scripts defined, all of them dependent on the react-scripts pac
 We may create more scripts. We will do this in the next section of this tutorial in order automatically deploy our web application to github.io.
 
 ```yaml
-  "eslintConfig": { 
-    "extends": "react-app"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
 ```
 This part is the **linting** configuration. It statically analyzes the code looking for problems or improvements (unused imports, etc).
