@@ -92,7 +92,7 @@ We can always update our node_modules directory (or create it if we've just clon
 
 A good explanation of the diffference between these commands is in this [post](https://stackoverflow.com/a/53594050/2828454).
 
-There is also the possibility to **delete a dependency**. For that matter use npm uninstall google-map-react --save
+There is also the possibility to **delete a dependency**. For that matter use `npm uninstall google-map-react --save`
 
 The next part are the scripts. This is very important part as it allow us to start the application, build a release version, etc.
 ```yaml
